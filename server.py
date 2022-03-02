@@ -1,8 +1,9 @@
-from distutils.log import debug
+from asyncio.windows_events import NULL
 from flask import Flask, request, jsonify, make_response
 from flask_cors import CORS 
 import json
 from prediction import predict
+from chat import get_response
 
 app = Flask(__name__)
 CORS(app)
@@ -14,6 +15,7 @@ images = [
 ret_obj = [
   { 'reverse': 'qwoioiad.eqowp' }
 ]
+
 
 @app.route('/')
 def home():
@@ -42,6 +44,18 @@ def add_image():
                 200,
             )
   response.headers["Content-Type"] = "application/json"
+  return response
+
+@app.route('/api/chat', methods=['POST'])
+def bot_response():
+  data_str = request.get_data().decode('ascii')
+  data = json.loads(data_str)
+  user_input = data['msg']
+  pos = float(data['pos'])
+  neg = float(data['neg'])
+  reply = get_response(user_input, pos, neg)
+  response = make_response(jsonify({'reply': reply}),200)
+  response.headers['Content-Type'] = 'application/json'
   return response
 
 

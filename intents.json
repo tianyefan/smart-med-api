@@ -1,0 +1,119 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": [
+        "Hi",
+        "Hey",
+        "How are you",
+        "Is anyone there?",
+        "Hello",
+        "Good day"
+      ],
+      "responses": [
+        "Hey :-)",
+        "Hello, thanks for visiting",
+        "Hi there, what can I do for you?",
+        "Hi there, how can I help?"
+      ]
+    },
+    {
+      "tag": "goodbye",
+      "patterns": ["Bye", "See you later", "Goodbye"],
+      "responses": [
+        "See you later, thanks for visiting",
+        "Have a nice day",
+        "Bye! Come back again soon."
+      ]
+    },
+    {
+      "tag": "thanks",
+      "patterns": ["Thanks", "Thank you", "That's helpful", "Thank's a lot!"],
+      "responses": ["Happy to help!", "Any time!", "My pleasure"]
+    },
+    {
+      "tag": "service",
+      "patterns": [
+        "What service do you have?",
+        "What are you serving?",
+        "What can I get from you?",
+        "What is the service?",
+        "What is the job of you?"
+      ],
+      "responses": [
+        "We predict the probalility you have breast cancer",
+        "We provide breast cancer diagnosis with the information you provide"
+      ]
+    },
+    {
+      "tag": "workflow",
+      "patterns": [
+        "How is the prediction working?",
+        "What should I do to get diagnosis?",
+        "How the process gona work?",
+        "What's the workflow?",
+        "workflow",
+        "process",
+        "flowchat"
+      ],
+      "responses": [
+        "We will ask you to upload an image to make prediction.",
+        "We use AI to make predication based on our image database."
+      ]
+    },
+    {
+      "tag": "time",
+      "patterns": [
+        "How long should I wait?",
+        "How long does prediction take?",
+        "When do I get my report?",
+        "When",
+        "How long"
+      ],
+      "responses": [
+        "Result should be in 3 min,  depends on the size of image",
+        "It depends on the image you provide, usually within 3 min"
+      ]
+    },
+    {
+      "tag": "funny",
+      "patterns": [
+        "Tell me a joke!",
+        "Tell me something funny!",
+        "Do you know a joke?"
+      ],
+      "responses": [
+        "Why did the hipster burn his mouth? He drank the coffee before it was cool.",
+        "What did the buffalo say when his son left for college? Bison.",
+        "What do you call an angry carrot? A steamed veggie",
+        "Why is Peter Pan always flying? He Neverlands.",
+        "Why does Waldo only wear striped shirts? He doesn’t want to be spotted."
+      ]
+    },
+    {
+      "tag": "result",
+      "patterns": [
+        "Show me my result.",
+        "result",
+        "What is my result.",
+        "Tell me about my analysis.",
+        "Can you tell me my result?",
+        "How is my diagnosis result?"
+      ],
+      "responses": {
+        "positive_70": [
+          "Unfortunately, we think you have a high chance of getting this cancer based on our model.",
+          "You have high chance of getting this cancer, we encourage you to go for detailed check asap!"
+        ],
+        "positive_50": [
+          "We think you have some sign of breast cancer based on our analysis, we encourage you double check in hospital.",
+          "The result is that we think you have more than 50% of chance of getting the cancer."
+        ],
+        "negative": [
+          "Base on our prediction, congrates, you have little chance of getting breast cancer.",
+          "Congrates, You are all good based on our analysis."
+        ]
+      }
+    }
+  ]
+}
