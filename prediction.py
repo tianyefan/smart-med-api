@@ -10,12 +10,12 @@ resnet = DenseNet201(
 )
 
 
-file_path = 'C:\\Users\\Richard\\Desktop\\smart-med-ai\\weights_optimized.hdf5'
+weights = 'weights_optimized.hdf5'
 
 def predict(url):
     img = transform_image(url)
     model = build_model(resnet, lr=1e-4)
-    model.load_weights(file_path)
+    model.load_weights(weights)
     predction = model.predict(img)
     return predction
 
