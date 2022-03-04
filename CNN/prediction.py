@@ -1,5 +1,5 @@
-from cnn_model import build_model
-from image_utils import transform_image
+from CNN.cnn_model import build_model
+from CNN.image_utils import transform_image
 from keras.applications.densenet import DenseNet201
 
 
@@ -10,7 +10,7 @@ resnet = DenseNet201(
 )
 
 
-weights = 'weights_optimized.hdf5'
+weights = './CNN/weights_optimized.hdf5'
 
 def predict(url):
     img = transform_image(url)

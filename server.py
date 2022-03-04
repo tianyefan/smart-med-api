@@ -1,9 +1,8 @@
-from asyncio.windows_events import NULL
 from flask import Flask, request, jsonify, make_response
 from flask_cors import CORS 
 import json
-from prediction import predict
-from chat import get_response
+from CNN.prediction import predict
+from NLP.chat import get_response
 
 app = Flask(__name__)
 CORS(app)

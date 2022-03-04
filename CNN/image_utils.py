@@ -1,6 +1,5 @@
 from PIL import Image
 import requests
-from io import BytesIO
 import numpy as np
 import cv2
 
