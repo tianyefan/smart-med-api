@@ -10,7 +10,7 @@ resnet = DenseNet201(
 )
 
 
-weights = './CNN/weights_optimized.hdf5'
+weights = './CNN/weights_best.hdf5'
 
 def predict(url):
     img = transform_image(url)
