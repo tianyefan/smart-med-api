@@ -1,6 +1,5 @@
 from keras import layers
 from keras.models import Sequential
-from keras.optimizers import Adam
 from keras.applications.densenet import DenseNet201
 
 def build_model(backbone, lr=1e-4):
@@ -13,7 +12,7 @@ def build_model(backbone, lr=1e-4):
     
     model.compile(
         loss='binary_crossentropy',
-        optimizer=Adam(learning_rate=lr),
+        optimizer="adam",
         metrics=['accuracy']
     )
     return model
